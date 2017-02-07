@@ -12,7 +12,5 @@ namespace TheRecordStore.Controllers
         {
             return View();
         }
-
-       
     }
 }

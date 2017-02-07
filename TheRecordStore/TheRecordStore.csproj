@@ -173,6 +173,7 @@
       <DependentUpon>201702072027434_AddedCreatedDTtoBandcs.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Band.cs" />
     <Compile Include="Models\RecordStoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
