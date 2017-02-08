@@ -7,13 +7,13 @@ namespace TheRecordStore.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class FixedSpellingInBancs : IMigrationMetadata
+    public sealed partial class AddedAlbumsDetails : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FixedSpellingInBancs));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedAlbumsDetails));
         
         string IMigrationMetadata.Id
         {
-            get { return "201702072023203_FixedSpellingInBancs"; }
+            get { return "201702080136553_AddedAlbumsDetails"; }
         }
         
         string IMigrationMetadata.Source

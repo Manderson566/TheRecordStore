@@ -156,28 +156,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlbumsController.cs" />
+    <Compile Include="Controllers\BandController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702071930505_Initial.cs" />
-    <Compile Include="Migrations\201702071930505_Initial.Designer.cs">
-      <DependentUpon>201702071930505_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201702072158264_restored.cs" />
+    <Compile Include="Migrations\201702072158264_restored.Designer.cs">
+      <DependentUpon>201702072158264_restored.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702072023203_FixedSpellingInBancs.cs" />
-    <Compile Include="Migrations\201702072023203_FixedSpellingInBancs.Designer.cs">
-      <DependentUpon>201702072023203_FixedSpellingInBancs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702072027434_AddedCreatedDTtoBandcs.cs" />
-    <Compile Include="Migrations\201702072027434_AddedCreatedDTtoBandcs.Designer.cs">
-      <DependentUpon>201702072027434_AddedCreatedDTtoBandcs.cs</DependentUpon>
+    <Compile Include="Migrations\201702080136553_AddedAlbumsDetails.cs" />
+    <Compile Include="Migrations\201702080136553_AddedAlbumsDetails.Designer.cs">
+      <DependentUpon>201702080136553_AddedAlbumsDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Band.cs" />
     <Compile Include="Models\RecordStoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\BandController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -216,6 +213,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Band\Index.cshtml" />
+    <Content Include="Views\Albums\Create.cshtml" />
+    <Content Include="Views\Albums\Delete.cshtml" />
+    <Content Include="Views\Albums\Details.cshtml" />
+    <Content Include="Views\Albums\Edit.cshtml" />
+    <Content Include="Views\Albums\Index.cshtml" />
+    <Content Include="Views\Band\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -229,14 +232,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702071930505_Initial.resx">
-      <DependentUpon>201702071930505_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702072158264_restored.resx">
+      <DependentUpon>201702072158264_restored.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702072023203_FixedSpellingInBancs.resx">
-      <DependentUpon>201702072023203_FixedSpellingInBancs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702072027434_AddedCreatedDTtoBandcs.resx">
-      <DependentUpon>201702072027434_AddedCreatedDTtoBandcs.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702080136553_AddedAlbumsDetails.resx">
+      <DependentUpon>201702080136553_AddedAlbumsDetails.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

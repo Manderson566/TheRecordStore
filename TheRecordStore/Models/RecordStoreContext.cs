@@ -9,5 +9,6 @@ namespace TheRecordStore.Models
     public class RecordStoreContext : DbContext
     {
        public DbSet<Band> Bands { get; set; }
+       public DbSet<Album> Albums { get; set; }
     }
 }
