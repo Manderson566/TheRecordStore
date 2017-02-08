@@ -20,10 +20,6 @@
         </p>
 
         <p>
-            @Html.TextBox("Details", null, new { @class = "form-control", placeholder = "Band Details" })
-        </p>
-
-        <p>
             <input type="submit" class="btn btn-default" value="Create Band" />
         </p>
 
@@ -39,9 +35,6 @@
             <th>
                 <h3>Release Date</h3>
             </th>
-            <th>
-                <h3>Instance Created</h3>
-            </th>
         </tr>
         @foreach (var band in ViewBag.AllBands)
         {
@@ -54,9 +47,6 @@
                 </td>
                 <td>
                     @band.ReleaseDate
-                </td>
-                <td>
-                    @band.Created
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = band.Id }) 

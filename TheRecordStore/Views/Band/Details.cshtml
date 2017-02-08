@@ -6,46 +6,33 @@
 
 <h2>Details</h2>
 
-<div>Band</div>
-<dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.BandName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BandName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Genre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ReleaseDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ReleaseDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Created)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Created)
-        </dt>
-
-         <dd>
-            @Html.DisplayFor(model => model.Details)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Details)
-        </dt>
-
-        </dl>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<table class="table">
+    <tr>
+        <th>
+            <h3>Band</h3>
+        </th>
+        <th>
+            <h3>Genre</h3>
+        </th>
+        <th>
+            <h3>Release Date</h3>
+        </th>
+    </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.BandName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Genre)
+            </td>
+            <td>
+               @Html.DisplayFor(model => model.ReleaseDate)
+            </td>
+          
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </td>
+       
+         </tr>
+  </table>

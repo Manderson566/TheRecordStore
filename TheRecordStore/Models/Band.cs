@@ -11,7 +11,5 @@ namespace TheRecordStore.Models
         public string BandName { get; set; }
         public string Genre { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public string Details { get; set; }
-        public DateTime Created { get; set; }
     }
 }

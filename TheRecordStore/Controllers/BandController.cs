@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -15,30 +16,49 @@ namespace TheRecordStore.Controllers
         // GET: Band
         public ActionResult Index()
         {
-            ViewBag.AllBands = db.Bands.OrderByDescending(b => b.Created).ToList();
+            ViewBag.AllBands = db.Bands;
             return View();
         }
 
         [HttpPost]
         public ActionResult Create(Band band)
         {
-            band.Created = DateTime.Now;
+           
             db.Bands.Add(band);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
+        {            
             Band band = db.Bands.Find(id);
-            if (band == null)
-            {
-                return HttpNotFound();
-            }
             return View(band);
+        }
+
+        public ActionResult Edit(int? id)
+        {
+            Band band = db.Bands.Find(id);
+            return View(band);
+        } 
+
+        [HttpPost]
+        public ActionResult Edit(Band band)
+        {
+            db.Entry(band).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Delete(int? id)
+        {
+            Band band = db.Bands.Find(id);
+            return View(band);
+        }
+        [HttpPost]
+        public ActionResult Delete(Band band)
+        {
+            db.Entry(band).State = EntityState.Modified;
+            db.Bands.Remove(band);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
