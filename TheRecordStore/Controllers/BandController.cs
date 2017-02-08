@@ -49,6 +49,7 @@ namespace TheRecordStore.Controllers
         public ActionResult Edit(Band band)
         {
             db.Entry(band).State = EntityState.Modified;
+            band.Created = DateTime.Now;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
