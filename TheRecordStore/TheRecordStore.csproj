@@ -174,6 +174,10 @@
     <Compile Include="Migrations\201702080403214_removedCreatedandDetailFromBand.Designer.cs">
       <DependentUpon>201702080403214_removedCreatedandDetailFromBand.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702080536504_ReaddedCreatedtoBandcs.cs" />
+    <Compile Include="Migrations\201702080536504_ReaddedCreatedtoBandcs.Designer.cs">
+      <DependentUpon>201702080536504_ReaddedCreatedtoBandcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Band.cs" />
@@ -215,7 +219,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Band\Index.cshtml" />
     <Content Include="Views\Albums\Create.cshtml" />
     <Content Include="Views\Albums\Delete.cshtml" />
@@ -225,6 +228,8 @@
     <Content Include="Views\Band\Details.cshtml" />
     <Content Include="Views\Band\Edit.cshtml" />
     <Content Include="Views\Band\Delete.cshtml" />
+    <Content Include="Views\Band\Create.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -246,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702080403214_removedCreatedandDetailFromBand.resx">
       <DependentUpon>201702080403214_removedCreatedandDetailFromBand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702080536504_ReaddedCreatedtoBandcs.resx">
+      <DependentUpon>201702080536504_ReaddedCreatedtoBandcs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

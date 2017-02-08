@@ -16,15 +16,20 @@ namespace TheRecordStore.Controllers
         // GET: Band
         public ActionResult Index()
         {
-            ViewBag.AllBands = db.Bands;
+            ViewBag.AllBands = db.Bands.OrderByDescending(b => b.Created).ToList();
             return View();
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
         [HttpPost]
         public ActionResult Create(Band band)
         {
            
             db.Bands.Add(band);
+            band.Created = DateTime.Now;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
